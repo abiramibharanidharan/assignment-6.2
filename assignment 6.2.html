@@ -1,0 +1,74 @@
+<doctype html>
+<html>
+      <head>
+             <title>Assignment 6.2</title>
+      </head>
+      <body>
+            <p>The array list</p>
+            <p id="demo"></p></br>
+
+            <p>click push button to push number 100,200,300,400 </p>
+            <button onclick="add()">Push</button></br></br>
+            <p id="demo1"></p></br>
+
+
+
+            <p>click pop button to pop the added element</p>
+            <button onclick="del()">Pop</button></br></br>
+            <p id="demo2"></p></br>
+
+
+
+            <p>click extrack button to print first to four element</p>
+            <button onclick="extract()">extract</button></br></br>
+            <p id="demo3"></p>
+     <script>
+            var number=[3,4,5,6,78,7,8];
+            var i,text;
+            var numberlength=number.length;
+            /* to display array in a list*/
+            text="<ul>"
+            for(i=0;i<numberlength;i++)
+           {
+               text +="<li>"+ number[i] + "</li>";
+
+            }
+           text += "</ul>";
+           document.getElementById("demo").innerHTML=text;
+
+           /*to add the array element in function*/
+           function add()
+           {
+                number.push(100,200,300,400);
+                document.getElementById("demo1").innerHTML=number;
+            }
+
+            /* to delete array element in function */
+           function del()
+            {
+                for(i=0;i<4;i++)
+                {
+                     number.pop();
+                     document.getElementById("demo2").innerHTML=number;
+                 }
+                 
+            }
+
+            
+           /* to extract array element in function*/
+           function extract()
+            {      
+                   var deletenumber=number.slice(1,5);
+                   document.getElementById("demo3").innerHTML=deletenumber;
+             }          
+     </script>
+      </body>
+</html>
+
+
+
+
+
+
+
+
